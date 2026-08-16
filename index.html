@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="a simple linktree for the vtuber and content creator ptchblvck. They wanted to offer an alternative to linktree and created a simple html website">
+    <meta name="description"
+        content="a simple linktree for the vtuber and content creator ptchblvck. They wanted to offer an alternative to linktree and created a simple html website">
     <title>ptchblvck linktwee</title>
 </head>
 <style>
-
     @media (prefers-color-scheme: dark) {
         body {
-            background-color: rgb(15, 21, 40);
+            background:
+                linear-gradient(hsl(225 50% 95% / .92) 0 0),
+                url("2026-08-03-ptchblvck_banners\(yt\).png") center / cover no-repeat;
+            color: hsl(255, 45%, 11%);
         }
-        p {
-            color: rgb(243, 245, 251);
+
+        a:visited {
+            color: hsl(51, 100%, 32%);
         }
     }
 
@@ -23,9 +28,12 @@
     }
 
     body {
-        display: grid;
+        margin: 0;
         height: 100vh;
-        grid-template-rows: auto 1fr auto;
+        background:
+            linear-gradient(hsl(225 45% 11% / .92) 0 0),
+            url("2026-08-03-ptchblvck_banners\(yt\).png") center / cover no-repeat;
+        color: hsl(225, 50%, 97%);
     }
 
     header>p {
@@ -34,13 +42,18 @@
 
     a {
         color: rgb(255, 33, 142);
-    }
-
-    a:hover {
-        color: rgb(252, 216, 0);
+        text-decoration: none;
     }
 
     a:visited {
+        color: hsl(51, 100%, 49%);
+    }
+
+    a:hover {
+        color: rgb(1, 148, 252);
+    }
+
+    a:visited:hover {
         color: rgb(1, 148, 252);
     }
 
@@ -53,68 +66,152 @@
         color: transparent;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        margin-bottom: 2rem;
     }
 
     ul {
         list-style: none;
         padding-inline-start: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
     }
 
     .headingbox {
         width: 100%;
         display: flex;
         justify-content: center;
-        
-    }
-  
-</style>
-<body>
-    <header>
-        <p>
-            No AI was used to create this. Not even boilerplate, so this might suck a bit.
-        </p>
-    </header>
-    <main>
-        <div class="headingbox">
 
-            <h1>ptchblvck</h1>
-        </div>
-        <ul>
-            <li>
-                <a href="https://twitch.tv/ptchblvck" target="_blank">
-                <div>
-                    <p>twitch</p>
-                </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://instagram.com/ptchblvck" target="_blank">
-                <div>
-                    <p>instagram</p>
-                </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://youtube.com/@ptchblvck" target="_blank">
-                <div>
-                    <p>youtube</p>
-                </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://x.com/ptchblvck_" target="_blank">
-                <div>
-                    <p>twitter/x</p>
-                </div>
-                </a>
-            </li>
-        </ul>
-    </main>
-    <footer>
-        <p>
-           © 2026 <a href="https://ptchblvck.com" target="_blank" >ptchblvck</a>
-        </p>
-        
-    </footer>
+    }
+
+    .link-with-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .link-with-icon>svg {
+        height: 24px;
+        width: 24px;
+    }
+
+    .link-with-icon>p {
+        margin-block: 0;
+    }
+
+    .full-page {
+        display: grid;
+        height: 100vh;
+        grid-template-rows: auto 1fr auto;
+    }
+</style>
+
+<body>
+    <div class="full-page">
+
+        <header>
+            <p>
+                No AI was used to create this. Not even boilerplate, so this might suck a bit.
+            </p>
+        </header>
+        <main>
+            <div class="headingbox">
+
+                <h1>ptchblvck</h1>
+            </div>
+            <ul>
+                <li>
+                    <a href="https://twitch.tv/ptchblvck" target="_blank">
+                        <div class="link-with-icon">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M391.17,103.47H352.54v109.7h38.63ZM285,103H246.37V212.75H285ZM120.83,0,24.31,91.42V420.58H140.14V512l96.53-91.42h77.25L487.69,256V0ZM449.07,237.75l-77.22,73.12H294.61l-67.6,64v-64H140.14V36.58H449.07Z">
+                                </path>
+                            </svg>
+                            <p>twitch</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/ptchblvck" target="_blank">
+                        <div class="link-with-icon">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                                </path>
+                            </svg>
+                            <p>instagram</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/@ptchblvck" target="_blank">
+                        <div class="link-with-icon">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                </path>
+                            </svg>
+                            <p>youtube</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://vgen.co/ptchblvck" target="_blank">
+                        <div class="link-with-icon">
+
+                            <svg fill="currentColor" stroke="currentColor" stroke-width="0.5" viewBox="10 0 180 180"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path
+                                        d="M 18.16,89 c 0.47,-10.89 5.4,-19.11 14.79,-24.64 c 18.77,-8.88 31.44,0.56 41.56,15.64 c 0.57,0.46 1.46,2.22 2.31,1.36 c 2.59,-27.11 24.36,-47.41 51.68,-47.54 c 30.31,-1.25 60.6,31.75 56.12,61.49 c -4.47,14.3 -22.87,35.24 -33.67,46.14 c -24.2,23.84 -52.79,30.73 -81.96,10.24 c -15.53,-11.3 -50.57,-42.87 -50.83,-62.69 Z M 32.23,85 c 0.1,1.99 0.67,3.84 1.7,5.55 c 14.65,19.15 35.74,44.87 60.06,50.98 c 28.25,5.37 54.98,-30.77 68.32,-51.54 c 4.57,-10.9 -6.09,-25.02 -13.45,-32.35 c -29.88,-28.51 -75.15,9.49 -52,43.96 c 4.56,5.46 9.24,10.76 14.06,15.91 c -0.25,1.63 -6.77,4.16 -8.42,4.44 c -16.41,2.29 -43.94,-31.57 -53.04,-43.85 c -6.74,-6.27 -16.66,-2.04 -17.23,6.9 Z M 110.8,82 c 0.08,-5.18 2.28,-9.22 6.61,-12.12 c 12.86,-7.92 30.28,9.43 20.78,20.01 c -2.86,3.46 -8.04,11.35 -11.57,13.52 c -4.59,-4.3 -9.05,-8.75 -13.38,-13.35 c -1.74,-2.41 -2.55,-5.09 -2.44,-8.06 Z" />
+                                </g>
+                            </svg>
+
+                            <p>vgen</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://bsky.app/profile/ptchblvck.bsky.social" target="_blank">
+                        <div class="link-with-icon">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.468 1.948C5.303 3.325 7.276 6.118 8 7.616c.725-1.498 2.698-4.29 4.532-5.668C13.855.955 16 .186 16 2.632c0 .489-.28 4.105-.444 4.692-.572 2.04-2.653 2.561-4.504 2.246 3.236.551 4.06 2.375 2.281 4.2-3.376 3.464-4.852-.87-5.23-1.98-.07-.204-.103-.3-.103-.218 0-.081-.033.014-.102.218-.379 1.11-1.855 5.444-5.231 1.98-1.778-1.825-.955-3.65 2.28-4.2-1.85.315-3.932-.205-4.503-2.246C.28 6.737 0 3.12 0 2.632 0 .186 2.145.955 3.468 1.948">
+                                </path>
+                            </svg>
+                            <p>bsky/x</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://x.com/ptchblvck_" target="_blank">
+                        <div class="link-with-icon">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z">
+                                </path>
+                            </svg>
+                            <p>twitter/x</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </main>
+        <footer>
+            <p>
+                © 2026 <a href="https://ptchblvck.com" target="_blank">ptchblvck</a>
+            </p>
+
+        </footer>
+    </div>
 </body>
+
 </html>
